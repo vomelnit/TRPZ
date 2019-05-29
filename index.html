@@ -14,6 +14,9 @@
 
 
 		<link rel="stylesheet" href="css/style.css">
+		
+		<link rel="stylesheet/less" type="text/css" href="less/style1.less">
+		
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 
 		<style>
@@ -27,7 +30,7 @@
 
 
 
-		<title>Changed title</title>
+		<title>Hello, world!</title>
 	</head>
 <body>
 
@@ -37,7 +40,7 @@
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-
+	<script src="node_modules/less/dist/less.min.js"></script>
 	<script src="js/popper.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 
@@ -47,8 +50,10 @@
 		<div class="container-fluid" >
 			<nav class="navbar navbar-expand-lg navbar-dark	bg-dark sticky-top">
 			<a class="navbar-brand" href="index.html">
+			
 			<img src="img/logo.jpg" width="30"
-			height="30">
+				height="30">
+				
 			</a>
 			<button class="navbar-toggler" type="button"
 			data-toggle="collapse" 
@@ -64,7 +69,7 @@
 				<li class="nav-item">
 				<a class="nav-link text-light"
 				id="home-tab" data-toggle="tab" href="#home" role="tab"
-				aria-controls="home" aria-selected="true">Главная</a>
+				aria-controls="home" aria-selected="false">Главная</a>
 				</li>
 				<li class="nav-item">
 				<a class="nav-link text-light"
@@ -78,6 +83,14 @@
 				aria-controls="testing" 
 				aria-selected="false">Тестирование</a>
 				</li>
+
+				<li class="nav-item">
+				<a class="nav-link text-light"
+				id="less-tab" data-toggle="tab" href="#less" role="tab" 
+				aria-controls="less" 
+				aria-selected="true">LESS</a>
+				</li>
+
 				<li class="nav-item">
 				<a class="nav-link text-light"
 				id="contacts-tab" data-toggle="tab" href="#contacts"
@@ -101,6 +114,11 @@
 
 
 
+
+
+
+
+	
 
 
 	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal" 
@@ -161,7 +179,7 @@
 
 
 
-			<div class="tab-pane active bg-primary" id="home"
+			<div class="tab-pane bg-primary" id="home"
 			role="tabpanel" aria-labelledby="home-tab">
 				<div class="container">
 					<div class="row">
@@ -257,6 +275,116 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+			<div class="tab-pane active" id="less" role="tabpanel" aria-labelledby="less-tab">
+				<div class="wrapper">
+					<nav class="mynav">
+						<button class="nav__theme">Change theme</button>
+						<ul class="nav__menu">
+							<li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+							<li class="nav__item"><a href="#" class="nav__link">About</a></li>
+							<li class="nav__item"><a href="#" class="nav__link">Items</a></li>
+							<li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+						</ul>
+					</nav>
+
+
+					<section class="main">
+						<div class="main__content">
+							<div class="main__tile main__tile--danger">
+								<div class="main__header">Product 1</div>
+									<ul class="main__features">
+										<li class="main__item">Feature 1<span class="main__plus">+</span></li>
+										<li class="main__item">Feature 2<span class="main__plus">+</span></li>
+										<li class="main__item">Feature
+										3<span class="main__plus">+</span></li>
+										<li class="main__item">Feature
+										4</li>
+										<li class="main__item">Feature
+										5</li>
+									</ul>
+									<div class="main__footer">
+										<button class="main__button	main__button--danger">Click on me!</button>
+									</div>
+								</div>
+							
+								<div class="main__tile main__tile--warning">
+									<div class="main__header">Product 2</div>
+										<ul class="main__features">
+											<li class="main__item">Feature
+											1<span class="main__plus">+</span></li>
+											<li class="main__item">Feature
+											2</li>
+											<li class="main__item">Feature
+											3<span class="main__plus">+</span></li>
+											<li class="main__item">Feature
+											4<span class="main__plus">+</span></li>
+											<li class="main__item">Feature
+											5</li>
+										</ul>
+										<div class="main__footer">
+										<button class="main__button main__button--warning">Click on me!</button>
+										</div>
+								</div>
+
+
+								
+								<div class="main__tile main__tile--primary">
+									<div class="main__header">Product 3</div>
+									
+										<ul class="main__features">
+											<li class="main__item">Feature 1</li>
+											<li class="main__item">Feature
+											2<span class="main__plus">+</span></li><li class="main__item">Feature
+											3<span class="main__plus">+</span></li>
+											<li class="main__item">Feature
+											4<span class="main__plus">+</span></li>
+											<li class="main__item">Feature
+											5</li>
+										</ul>
+										<div class="main__footer">
+											<button class="main__button main__button--primary">Click on me!</button>
+										</div>
+								</div>
+
+
+
+								<div class="main__tile main__tile--success">
+									<div class="main__header">Product 4</div>
+										<ul class="main__features">
+											<li class="main__item">Feature
+											1<span class="main__plus">+</span></li>
+											<li class="main__item">Feature
+											2</li>
+											<li class="main__item">Feature
+											3</li>
+											<li class="main__item">Feature
+											4<span class="main__plus">+</span></li>
+											<li class="main__item">Feature
+											5<span class="main__plus">+</span></li>
+										</ul>
+									<div class="main__footer">
+									<button class="main__button
+									main__button--success">Click on me!</button>
+									</div>
+								</div>
+
+
+
+
+
+						</div>
+					</section>
+
+
+				
 				</div>
 			</div>
 
@@ -520,8 +648,12 @@
 <footer>
 		<div class="container">
 			<div class="d-sm-flex justify-content-between">
+				<div class="main__tilecp">
 				<div class="footer-left">
-					<p>Тестовий сайт 2019 год</p>
+					<p>Designed by</p>
+					<p>VADIM OMELNITSKY</p>
+					<p>&#169; 2019</p>
+				</div>
 				</div>
 				<div class="footer-right">
 					<span>Follow</span>
